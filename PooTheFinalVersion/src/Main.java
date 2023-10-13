@@ -8,6 +8,9 @@ import br.gov.cesarschool.poo.bonusvendas.dao.LancamentoBonusDao;
 import br.gov.cesarschool.poo.bonusvendas.dao.VendedorDAO;
 import br.gov.cesarschool.poo.bonusvendas.entidade.CaixaDeBonus;
 import br.gov.cesarschool.poo.bonusvendas.entidade.Vendedor;
+import br.gov.cesarschool.poo.bonusvendas.negocio.AcumuloResgateMediator;
+import br.gov.cesarschool.poo.bonusvendas.negocio.geral.StringUtil;
+import br.gov.cesarschool.poo.bonusvendas.negocio.geral.ValidadorCPF;
 
 public class Main {
 	
@@ -31,7 +34,12 @@ public class Main {
 //		System.out.println(teste.getDataHoraAtualizacao() +" -> " + "teste");
 //		
 //		System.out.println(testinho.buscarTodos());
-
+		
+		
+		Vendedor testevender = new Vendedor();
+		
+		AcumuloResgateMediator resgate = AcumuloResgateMediator.getInstance();
+		System.out.println(resgate.gerarCaixaDeBonus(testevender));
 		
 	}
 }
